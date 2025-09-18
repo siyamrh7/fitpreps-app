@@ -1,3 +1,4 @@
+import { baseUrl } from '../constants/baseConstant';
 import { store } from '../store';
 import { clearUser, setUser } from '../store/auth/userSlice';
 
@@ -15,7 +16,7 @@ export const refreshUserData = async () => {
   }
 
   try {
-    const response = await fetch(`${process.env.EXPO_PUBLIC_BACKEND_URI || 'https://back.fitpreps.nl'}/api/users/user`, {
+    const response = await fetch(`${baseUrl}/api/users/user`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -33,14 +34,13 @@ export const refreshUserData = async () => {
     }
 
     const data = await response.json();
-    
+    console.log(data)
     // Update the user data in Redux store
     store.dispatch(setUser({
       ...user,
-      user: data.user,
+      user: data,
       metadata: data.metadata,
       points: data.points,
-      subscription: data.subscription
     }));
     
     console.log('User data refreshed successfully');

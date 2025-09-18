@@ -25,11 +25,11 @@ const dispatch=useDispatch()
                 }
             });
             if (!response.ok) {
-               
+              dispatch(setSubscription(null))
                 return;
             }
             const subscriptionData = await response.json();
-
+            console.log(subscriptionData , 'subscriptionData')
             dispatch(setSubscription(subscriptionData.subscription))
         } catch (error) {
             return
@@ -41,6 +41,7 @@ const dispatch=useDispatch()
 
 
 useEffect(() => {
+  console.log("fetch subscription data")
    fetchSubscription()
 },[user])
 

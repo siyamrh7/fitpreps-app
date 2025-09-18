@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '~/src/store';
 export default function subscription() {
   const subscription=useSelector((state:RootState)=>state.user.subscription)
+  console.log(subscription)
   const { product } = useLocalSearchParams();
   const productParam = Array.isArray(product) ? product[0] : product ?? '';
   const haveCoin = false;

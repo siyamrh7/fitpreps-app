@@ -115,8 +115,8 @@ export default function SubscribedFoodLists({
         shadowColor="#0A0D12"
         shadowOffset={{ width: 0, height: 1 }}
         shadowOpacity={0.05}
-        shadowRadius={2}
-        elevation={1}
+        
+       
         maxHeight={40}
         maxWidth={112}
         flex={1}

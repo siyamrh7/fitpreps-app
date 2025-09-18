@@ -9,6 +9,8 @@ import { router, useLocalSearchParams } from 'expo-router';
 import CartPlaced from '~/src/components/orderplaced/CartPlaced';
 import { RootState } from '~/src/store';
 import { useSelector } from 'react-redux';
+import { baseUrl } from '~/src/constants/baseConstant';
+import { refreshUserData } from '~/src/utils/userDataRefresh';
 export default function OrderPlaced() {
   const screenWidth = Dimensions.get('window').width;
   const { type, id } = useLocalSearchParams() || {};
@@ -23,8 +25,8 @@ export default function OrderPlaced() {
         if (isMounted) setIsLoading(false);
         return;
       }
-      try {
-        const baseUrl = process.env.EXPO_PUBLIC_BACKEND_URI || 'https://back.fitpreps.nl';
+
+      try {      
         const res = await fetch(`${baseUrl}/api/subscription/payment-check/${id}`, {
           method: 'GET',
           headers: {
@@ -36,6 +38,7 @@ export default function OrderPlaced() {
         if (!isMounted) return;
         if (data?.success === true || data?.success === 'true') {
           setIsSuccess(true);
+          refreshUserData();
         } else {
           setIsSuccess(false);
         }
@@ -46,7 +49,9 @@ export default function OrderPlaced() {
         if (isMounted) setIsLoading(false);
       }
     }
+   setTimeout(() => {
     checkSubscriptionPayment();
+   }, 1000);
     return () => {
       isMounted = false;
     };
@@ -122,7 +127,7 @@ export default function OrderPlaced() {
                           router.replace('/(tabs)/meals');
                         } else {
                           router.replace({
-                            pathname: '/meals',
+                            pathname: '/(protected)/(sharedScreens)/subscription/subscription',
                             // params: {},
                           });
                         }

@@ -18,7 +18,7 @@ export default function VerifyPayment() {
       const paymentId = url.searchParams.get('id');
 console.log(paymentId, 'paymentId');
 console.log(hasPaymentSuccess, 'hasPaymentSuccess');
-      if (hasPaymentSuccess && paymentId) {
+      if ( paymentId) {
         // console.log('🎉 Payment Success Detected!');
         // console.log('🧾 Payment ID:', paymentId);
         // 🚀 Redirect or handle success logic here

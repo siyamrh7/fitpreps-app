@@ -105,7 +105,7 @@ export default function SubscribedProductsPay({
             text1: 'Bestelling geplaatst!',
             text2: 'Je abonnement is succesvol gestart.',
           });
-          router.push('/(protected)/(sharedScreens)/subscription/subscription');
+          router.push('/(protected)/subscriptionplaced/success');
         } else {
           throw new Error(data.message || 'Bestelling mislukt');
         }
