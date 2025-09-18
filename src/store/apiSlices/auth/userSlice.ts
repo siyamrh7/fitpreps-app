@@ -17,7 +17,16 @@ const userApiSlice = rootApiSlice.injectEndpoints({
         body,
       }),
     }),
+    fetchUserData: builder.mutation({
+      query: (token: string) => ({
+        url: '/users/user',
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+        },
+      }),
+    }),
   }),
 });
 
-export const { useRegisterMutation, useLoginMutation } = userApiSlice;
+export const { useRegisterMutation, useLoginMutation, useFetchUserDataMutation } = userApiSlice;

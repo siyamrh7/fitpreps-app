@@ -280,7 +280,7 @@ export default function SubscriptionCheckoutForm({
           frequency: plan, 
           amount: parseFloat(totalCost || '0').toFixed(2), 
           data: data,
-          type: "fueld"
+          type: type || "fueld"
         }),
       });
 

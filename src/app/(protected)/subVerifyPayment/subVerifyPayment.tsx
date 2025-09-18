@@ -9,21 +9,22 @@ export default function VerifyPayment() {
   const { redirectUrl } = useLocalSearchParams();
   const handleNavigationChange = (navState: any) => {
     const currentUrl = navState.url;
-    console.log('🔗 Navigated to:', currentUrl);
+    console.log('🔗 Navigated to new:', currentUrl);
  const router = useRouter();
     try {
       const url = new URL(currentUrl);
 
-      const hasPaymentSuccess = url.pathname.includes('fitpreps.nl');
+      const hasPaymentSuccess = currentUrl.includes('fitpreps.nl');
       const paymentId = url.searchParams.get('id');
-
+console.log(paymentId, 'paymentId');
+console.log(hasPaymentSuccess, 'hasPaymentSuccess');
       if (hasPaymentSuccess && paymentId) {
         // console.log('🎉 Payment Success Detected!');
         // console.log('🧾 Payment ID:', paymentId);
         // 🚀 Redirect or handle success logic here
         // Example: router.replace('/success') or Toast.show(...)
         router.replace({
-          pathname: '/orderplaced',
+          pathname: '/subscriptionplaced',
           params: {
             type: 'subscription',
             id: paymentId,

@@ -7,7 +7,7 @@ import Feather from '@expo/vector-icons/Feather';
 import { selectedItems } from '~/src/constant';
 import { SafeAreaView } from 'react-native-safe-area-context';
 export default function () {
-  const [pressButton, setPressButton] = useState<string | null>(null);
+  const [pressButton, setPressButton] = useState<string>("meal");
 
   const { product } = useLocalSearchParams();
   const selectedScreen = selectedItems.find((data) => data.name === product);
@@ -116,7 +116,7 @@ export default function () {
                           pathname:
                             pressButton === 'meal'
                               ? '/(protected)/(navigator)/(tabs)/meals'
-                              : '/(protected)/(navigator)/(tabs)/subscription',
+                              : '/(protected)/(sharedScreens)/subscription/subscription',
                           params: {
                             product,
                             // @ts-ignore

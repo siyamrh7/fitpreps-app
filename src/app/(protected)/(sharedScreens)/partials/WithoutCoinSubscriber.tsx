@@ -8,7 +8,7 @@ import { router } from 'expo-router';
 const videoSource =
   'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
 
-export default function WithoutCoinSubscriber() {
+export default function WithoutCoinSubscriber({ product }: { product: string }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const fadeAnim = useRef(new Animated.Value(1)).current;
 
@@ -74,7 +74,13 @@ export default function WithoutCoinSubscriber() {
         </View>
         <XStack justifyContent="center">
           <Button
-            onPress={() => router.push('/(navigator)/(tabs)/subscription')}
+            onPress={() =>
+              router.push({
+                pathname:
+                  '/(protected)/(navigator)/(tabs)/subscription' as any,
+                params: { product },
+              })
+            }
             color="white"
             bg="#FD4F01"
             fontSize={16}

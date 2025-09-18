@@ -7,7 +7,9 @@ import { subscriptionPlans } from '~/src/constant';
 import Toast from 'react-native-toast-message';
 export default function SelectSubscriptionPlan({
   isUpgradePlan = false,
+  product,
 }: {
+  product: string;
   isUpgradePlan?: boolean;
 }) {
   const [selectedPlan, setSelectedPlan] = useState(subscriptionPlans[0]);
@@ -35,7 +37,7 @@ export default function SelectSubscriptionPlan({
           totalCost: totalCost.toString(),
           totalPoints: totalPoints.toString(),
           plan: selectedPlan.name === 'Weekly Plan' ? 'weekly' : 'monthly',
-          type: plan.title,
+          type: product,
           bonusPoints: bonusPoints.toString(),
           regularPoints: regularPoints.toString(),
           originalPrice: originalPrice.toString(),

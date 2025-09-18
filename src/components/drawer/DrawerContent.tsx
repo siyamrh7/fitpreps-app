@@ -17,8 +17,11 @@ import Settings from '~/public/images/drawer/settings-01.svg';
 import LogOut from '~/public/images/drawer/log-out-02.svg';
 import { AppRoute } from '~/src/types/type';
 import LogOutPopUp from '../Logout/LogOutPopUp';
+import { RootState } from '~/src/store';
+import { useSelector } from 'react-redux';
 
 export default function DrawerContent({ navigation }: { navigation: DrawerNavigation }) {
+  const user = useSelector((s: RootState) => s.user.user?.user);
   const { top } = useSafeAreaInsets();
   const [activeRoute, setActiveRoute] = useState<string | null>(null);
   const [showLogOutPopUp, setShowLogOutPopUp] = useState(false);
@@ -40,10 +43,11 @@ export default function DrawerContent({ navigation }: { navigation: DrawerNaviga
             </TouchableOpacity>
             <YStack gap="$1">
               <Text color="white" fontSize={20} fontWeight={700}>
-                User Name
+                {user?.metadata.first_name} {" "}
+                {user?.metadata.last_name}
               </Text>
               <Text color="white" fontSize={16} fontWeight={500}>
-                username@gmail.com
+                {user?.email}
               </Text>
             </YStack>
           </XStack>
