@@ -82,7 +82,7 @@ export default function CartFoodList({
             {item.name}
           </Text>
           <Text color="#FD4F01" fontSize={14} fontWeight={700}>
-            ${(parseFloat(item.metadata._price) * Number(item.quantity)).toFixed(2)}
+          €{(parseFloat(item.metadata._price) * Number(item.quantity)).toFixed(2)}
           </Text>
         </YStack>
       </XStack>

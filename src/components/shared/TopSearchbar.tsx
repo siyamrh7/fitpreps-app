@@ -29,7 +29,7 @@ export default function TopSearchbar({
     if (action) {
       action();
     } else {
-      router.back();
+      router.push('/');
     }
   };
 

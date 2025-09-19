@@ -48,6 +48,12 @@ export default function Home() {
           <Text>Subscription coming soon</Text>
         </YStack>
       );
+    case 'shaped':
+      return (
+        <YStack>
+          <Text>Shaped coming soon</Text>
+        </YStack>
+      );
     default:
       return subscriptionType ? (
         <Subscription product={product as string} subscription={subscription as boolean} />

@@ -88,10 +88,9 @@ export default function Home() {
               </XStack>
               <YStack alignItems="center" mt="$7">
                 <Text color="#1E1F20" fontWeight={500} fontSize={16}>
-                  Fuelling your fitness.
-                </Text>
+Meer resultaat.  Minder gedoe.</Text>
                 <Text color="#1E1F20" fontWeight={500} fontSize={16}>
-                  Pick your journey.
+               
                 </Text>
               </YStack>
               <YStack px={'$2'} mt="$7">

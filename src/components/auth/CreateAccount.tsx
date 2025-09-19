@@ -62,7 +62,7 @@ export default function CreateAccount() {
         <Fitpreps />
       </XStack>
       <Text fontSize={16} fontWeight={500} color="#1E1F20" textAlign="center">
-        Sign up to start your journey with us.
+      Meld je aan en start je Fit Preps-journey.
       </Text>
       <YStack flex={1} width="100%" gap="$4">
         {creaetAccoungFeilds.map((field, i) => (
@@ -160,18 +160,18 @@ export default function CreateAccount() {
       </YStack>
       <YStack>
         <Text fontSize={12} color="#1E1F20" fontWeight={500} textAlign="center">
-          By continuing, you agree to
+        Door verder te gaan, ga je akkoord met
         </Text>
         <XStack alignItems="center" gap={4}>
           <TouchableOpacity>
             <Text color="#FD4F01" fontWeight={500}>
-              Terms of Use
+            onze voorwaarden 
             </Text>
           </TouchableOpacity>
-          <Text>and</Text>
+          <Text>en</Text>
           <TouchableOpacity>
             <Text color="#FD4F01" fontWeight={500}>
-              Privacy Policy.
+             privacyverklaring.
             </Text>
           </TouchableOpacity>
         </XStack>
@@ -193,20 +193,20 @@ export default function CreateAccount() {
           elevation={1}
           height={44}
           fontSize={16}>
-          Create Account
+          Account aanmaken
         </Button>
       </XStack>
       <XStack alignItems="center" justifyContent="center" gap={12}>
         <Text fontSize={16} color="#1E1F20" fontWeight={500} textAlign="center">
-          Already have an account?
+        Heb je al een account?
         </Text>
         <TouchableOpacity onPress={() => router.replace('/(auth)/log-in')}>
           <XStack>
             <Text fontSize={16} fontWeight={700} color="#FD4F01" textDecorationLine="underline">
-              Lo
+              Inlo
             </Text>
             <Text fontSize={16} color="#FD4F01" fontWeight={700}>
-              g
+              gg
             </Text>
             <Text
               ml={2}
@@ -214,7 +214,7 @@ export default function CreateAccount() {
               color="#FD4F01"
               fontWeight={700}
               textDecorationLine="underline">
-              In
+              en
             </Text>
           </XStack>
         </TouchableOpacity>
@@ -225,35 +225,35 @@ export default function CreateAccount() {
 
 const creaetAccoungFeilds = [
   {
-    placeholder: 'Enter First Name',
+    placeholder: 'Voornaam',
     icon: '',
     type: 'default',
     name: 'firstName',
     inputType: 'first_name',
   },
   {
-    placeholder: 'Enter Last Name',
+    placeholder: 'Achternaam',
     icon: '',
     type: 'default',
     name: 'lastName',
     inputType: 'last_name',
   },
   {
-    placeholder: 'Enter email',
+    placeholder: 'E-mailadres',
     type: 'email-address',
     icon: '',
     name: 'email',
     inputType: 'email',
   },
   {
-    placeholder: 'Enter password',
+    placeholder: 'Wachtwoord',
     icon: ({ ...props }) => <Feather {...props} />,
     type: 'password',
     name: 'password',
     inputType: 'password',
   },
   {
-    placeholder: 'Confirm password',
+    placeholder: 'Wachtwoord bevestigen',
     icon: ({ ...props }) => <Feather {...props} />,
     type: 'password',
     name: 'confirmPassword',

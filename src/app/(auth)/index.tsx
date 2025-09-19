@@ -15,7 +15,7 @@ export default function index() {
           <YStack f={1} alignItems="center" gap="$7">
             <Fitpreps />
             <Text fontSize={16} fontWeight={500} color="#1E1F20" textAlign="center">
-              Choose Fit Preps and support your fitness goals — without the hassle!
+            Met Fit Preps hou je focus, zonder gedoe.
             </Text>
             <YStack gap="$3" width="100%">
               <Button
@@ -30,7 +30,7 @@ export default function index() {
                 // shadowOpacity={1}
                 // elevation={0}
               >
-                Create Account
+                Account aanmaken
               </Button>
               <Button
                 onPress={() => router.push('/(auth)/log-in')}
@@ -44,9 +44,7 @@ export default function index() {
                 // shadowOpacity={1}
                 // elevation={0}
                 borderWidth={1}
-                borderColor="#FD4F01">
-                Log In
-              </Button>
+                borderColor="#FD4F01">Inloggen</Button>
             </YStack>
           </YStack>
         </SafeAreaView>

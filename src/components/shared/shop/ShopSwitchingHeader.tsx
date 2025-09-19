@@ -19,10 +19,12 @@ export default function SwitchHeader({
     setGender(() => null);
   };
   const handleGymPress = () => {
-    Toast.show({
-      type: 'success',
-      text1: 'Coming soon',
-    });
+    setSelectCategory(() => 'Gym Wear');
+    setGender(() => null);
+    // Toast.show({
+    //   type: 'success',
+    //   text1: 'Coming soon',
+    // });
   };
   return (
     <XStack width={'100%'} p={4} borderRadius={8} borderWidth={1} borderColor="#B6BAC3">

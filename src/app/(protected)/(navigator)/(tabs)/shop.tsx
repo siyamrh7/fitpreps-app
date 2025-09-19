@@ -52,7 +52,7 @@ export default function Shop() {
   const statusBarInfo = activeStatsBarInfo(selectCategory === 'Supplements' ? 'suppd' : 'shaped');
   const { data, isLoading } = useGetSupplementsQuery(null);
   const { data: gymwearData, isLoading: isGymwearLoading } = useGetGymwearQuery(undefined);
-  const { filteredProducts } = useProductFilters(data, productType as string);
+  const { filteredProducts : filteredSuppdProducts } = useProductFilters(data, productType as string);
   const { filteredProducts: filteredGymwearProducts } = useGymwearFilters(gymwearData || []);
   
   // Debug logging
@@ -69,12 +69,13 @@ export default function Shop() {
       <StatusBar style="dark" />
       <YStack flex={1} bg="white">
         <ProductHeader
-          data={selectCategory === 'Gym Wear' ? filteredGymwearProducts : filteredProducts}
+          data={selectCategory === 'Gym Wear' ? filteredGymwearProducts : filteredSuppdProducts}
           gender={gender}
           setGender={setGender}
           selectCategory={selectCategory as string}
           setSelectCategory={setSelectCategory}
           productType={productType as string}
+          
           activeStatsBarInfo={
             { ...statusBarInfo, tentColor: '#FD4F01' } as { name: string; color: string } | null
           }
@@ -87,11 +88,12 @@ export default function Shop() {
             {selectCategory !== 'Gym Wear' && gender === null ? (
               <DynamicProductLists
                 isLoading={isLoading}
-                data={filteredProducts}
-                productType={product as string}
+                data={filteredSuppdProducts}
+                productType={productType as string}
                 showsVerticalScrollIndicator={false}
                 scrollEventThrottle={16}
               />
+              
             ) : (
               <YStack flex={1}>
                 {selectCategory === 'Gym Wear' && gender === null && (

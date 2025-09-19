@@ -48,12 +48,12 @@ export default function Account() {
   }
   const headerStatus =
     authStatus === 'sign-up'
-      ? 'Create New Account'
+      ? 'Account aanmaken'
       : authStatus === 'forget-pass'
-        ? 'Forget Password'
+        ? 'Wachtwoord herstellen'
         : authStatus === 'recover-password'
-          ? 'Recover Password'
-          : 'Log In';
+          ? 'Wachtwoord herstellen'
+          : 'Inloggen';
   const AuthComponent = authFlow[authStatus as keyof typeof authFlow];
   const androidKeyboardBehavior = isKeyboardVisible ? 'height' : undefined;
 

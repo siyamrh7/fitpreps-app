@@ -39,7 +39,7 @@ export default function TabLayout() {
         name="meals"
         options={{
           headerShown: false,
-          title: 'Meals',
+          title: 'Maaltijden',
           tabBarIcon: ({ color, focused }) => {
             return !focused ? (
               <Image source={require('public/images/meals.png')} width={28} height={28} />
@@ -57,7 +57,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="subscription"
         options={{
-          title: 'Subscription',
+          title: 'Mijn plan',
           headerShown: false,
           tabBarIcon: ({ color, focused }) => {
             return !focused ? (

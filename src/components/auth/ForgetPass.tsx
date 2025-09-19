@@ -8,8 +8,7 @@ export default function ForgetPass({ account }: { account: string }) {
     <YStack mt={300} flex={1} alignItems="center" justifyContent="center" gap="$7" px={28}>
       <Fitpreps />
       <Text color="#1E1F20" fontSize={16} fontWeight={500}>
-        Enter your email to reset your password.
-      </Text>
+      Vul je e-mailadres in om je wachtwoord te herstellen.</Text>
       <Input
         gap={8}
         flex={1}
@@ -22,9 +21,10 @@ export default function ForgetPass({ account }: { account: string }) {
         shadowOffset={{ width: 0, height: 1 }}
         shadowRadius={2}
         shadowOpacity={1}
-        elevation={0.4}
+        shadowColor="rgba(221, 223, 227, 0.1)"
+        elevation={0.5}
         borderWidth={0.6}
-        placeholder="Enter your email id"
+        placeholder="E-mailadres"
       />
       {account !== 'recover-password' && (
         <XStack alignItems="center" justifyContent="center">
@@ -43,14 +43,14 @@ export default function ForgetPass({ account }: { account: string }) {
             elevation={1}
             height={44}
             fontSize={16}>
-            Submit
+            Herstel wachtwoord
           </Button>
         </XStack>
       )}
       {account !== 'recover-password' && (
         <XStack alignItems="center" justifyContent="center" gap={12}>
           <Text fontSize={16} color="#1E1F20" fontWeight={500} textAlign="center">
-            I remember my password.
+          Ik weet mijn wachtwoord weer.
           </Text>
           <XStack alignItems="center" justifyContent="flex-end">
             <TouchableOpacity onPress={() => router.replace('/(auth)/log-in')}>
@@ -60,7 +60,7 @@ export default function ForgetPass({ account }: { account: string }) {
                 borderBottomWidth={1}
                 borderBottomColor="#FD4F01"
                 color="#FD4F01">
-                Log In
+                Inloggen
               </Text>
             </TouchableOpacity>
           </XStack>
@@ -70,8 +70,8 @@ export default function ForgetPass({ account }: { account: string }) {
         <View gap="$7" flexDirection="column" flex={1} w="100%">
           <YStack w="100%" px="$4" bg="#E5F8EA" borderRadius={12} py="$3">
             <Text color="#009A21" fontSize={16} fontWeight={700} textAlign="center">
-              We&apos;ve sent you an email with a link to update your password.
-            </Text>
+            Check je inbox en volg de link om je wachtwoord te wijzigen.
+             </Text>
           </YStack>
           <XStack gap={8} alignItems="center" justifyContent="center">
             <Text color="#1E1F20" fontSize={16} fontWeight={500}>
@@ -84,7 +84,7 @@ export default function ForgetPass({ account }: { account: string }) {
                 fontWeight={700}
                 borderBottomWidth={1}
                 borderBottomColor={'#FD4F01'}>
-                Resend
+                Opnieuw versturen
               </Text>
             </TouchableOpacity>
           </XStack>

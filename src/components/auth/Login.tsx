@@ -44,7 +44,7 @@ export default function Login() {
         <Fitpreps />
       </XStack>
       <Text fontSize={16} fontWeight={500} color="#1E1F20" textAlign="center">
-        Welcome Back!
+      Welkom terug, legend!
       </Text>
       <YStack flex={1} width="100%" gap="$4">
         {loginFeilds.map((field, i) => (
@@ -134,7 +134,7 @@ export default function Login() {
               borderBottomWidth={1}
               borderBottomColor="#FD4F01"
               color="#FD4F01">
-              Forgot Password?
+              Wachtwoord vergeten?
             </Text>
           </TouchableOpacity>
         </XStack>
@@ -156,12 +156,12 @@ export default function Login() {
           elevation={1}
           height={44}
           fontSize={16}>
-          Log In
+          Inloggen
         </Button>
       </XStack>
       <XStack alignItems="center" justifyContent="center" gap={12}>
         <Text fontSize={16} color="#1E1F20" fontWeight={500} textAlign="center">
-          Don&apos;t have an account?
+        Nog geen account? 
         </Text>
         <XStack alignItems="center" justifyContent="flex-end">
           <TouchableOpacity onPress={() => router.replace('/(auth)/sign-up')}>
@@ -171,7 +171,7 @@ export default function Login() {
               borderBottomWidth={1}
               borderBottomColor="#FD4F01"
               color="#FD4F01">
-              Create Account
+              Account aanmaken
             </Text>
           </TouchableOpacity>
         </XStack>
@@ -182,13 +182,13 @@ export default function Login() {
 
 const loginFeilds = [
   {
-    placeholder: 'Enter your email id',
+    placeholder: 'E-mailadres',
     type: 'email-address',
     icon: '',
     name: 'email',
   },
   {
-    placeholder: 'Enter password',
+    placeholder: 'Wachtwoord',
     icon: ({ ...props }) => <Feather {...props} />,
     type: 'password',
     name: 'password',
