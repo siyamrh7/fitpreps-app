@@ -89,7 +89,7 @@ export default function ProductHeader({
                 </XStack>
                 <Text fontSize={11} color="#25272C">
                   {data.length}{' '}
-                  meal preps to explore
+                  maaltijden om te ontdekken
                 </Text>
               </XStack>
             </View>

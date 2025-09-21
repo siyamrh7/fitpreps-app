@@ -39,7 +39,7 @@ export default function SwitchHeader({
         // shadowOpacity={selectCategory === 'Supplements' ? 1 : 0}
         // elevation={selectCategory === 'Supplements' ? 0.05 : 0}
         bg={selectCategory === 'Supplements' ? bg : 'white'}>
-        Supplements
+        Supplementen
       </Button>
       <Button
         // onPress={() => setSelectCategory('Gym Wear')}
@@ -53,7 +53,7 @@ export default function SwitchHeader({
         // shadowOpacity={selectCategory === 'Gym Wear' ? 1 : 0}
         // elevation={selectCategory === 'Gym Wear' ? 0.05 : 0}
         bg={selectCategory === 'Gym Wear' ? bg : 'white'}>
-        Gym Wear
+        Gym Wears
       </Button>
     </XStack>
   );
