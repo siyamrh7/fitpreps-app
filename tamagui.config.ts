@@ -70,15 +70,15 @@ export const Main = styled(YStack, {
   maxWidth: 960,
 });
 
-// export const Title = styled(H1, {
-//   color: '#000',
-//   size: '$12',
-// });
+export const Title = styled(H1, {
+  color: '#000',
+  size: '$12',
+});
 
-// export const Subtitle = styled(SizableText, {
-//   color: '#38434D',
-//   size: '$9',
-// });
+export const Subtitle = styled(SizableText, {
+  color: '#38434D',
+  size: '$9',
+});
 export const fonts = createFont({
   face: {
     400: { normal: 'Gilroy-Regular' },

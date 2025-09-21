@@ -26,7 +26,7 @@ export default function DrawerContent({ navigation }: { navigation: DrawerNaviga
   const [activeRoute, setActiveRoute] = useState<string | null>(null);
   const [showLogOutPopUp, setShowLogOutPopUp] = useState(false);
   const handleNavigation = (route: string, name?: string) => {
-    if (name === 'Log Out') {
+    if (name === 'Uitloggen') {
       setShowLogOutPopUp(true);
       return;
     }
