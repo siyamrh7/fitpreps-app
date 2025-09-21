@@ -41,11 +41,10 @@ export default function CartFoodList({
     <XStack
       pb="$2"
       zIndex={0}
-      flex={1}
+      minHeight={50}
       alignSelf="stretch"
       alignItems="center"
       gap="$2"
-      flexWrap="wrap"
       bg="white"
       borderBottomWidth={1}
       borderColor="#EDEEF1"
@@ -72,13 +71,14 @@ export default function CartFoodList({
             resizeMode="cover"
           />
         </XStack>
-        <YStack flex={1} alignSelf="stretch" justifyContent="space-between">
+        <YStack flex={1} alignSelf="stretch" justifyContent="space-between" minHeight={48}>
           <Text
             fontSize={12}
             numberOfLines={2}
             ellipsizeMode="tail"
             color="#1E1F20"
-            fontWeight={500}>
+            fontWeight={500}
+            minHeight={28}>
             {item.name}
           </Text>
           <Text color="#FD4F01" fontSize={14} fontWeight={700}>
@@ -93,9 +93,8 @@ export default function CartFoodList({
         // shadowOpacity={0.05}
         // shadowRadius={2}
         // elevation={1}
-        maxHeight={36}
+        height={36}
         maxWidth={112}
-        flex={1}
         alignSelf="stretch"
         alignItems="center"
         borderWidth={1}

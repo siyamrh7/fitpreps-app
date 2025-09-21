@@ -81,7 +81,7 @@ export default function Home() {
           showsVerticalScrollIndicator={false}
           bg={'#fffdf6'}>
           <YStack flex={1} pb="$10">
-            <TopSearchbar placeholder="Search here" />
+            <TopSearchbar placeholder="Zoeken" />
             <YStack flex={1} pt={48}>
               <XStack justifyContent="center">
                 <Image source={require('public/images/fitpreps.png')} width={278} height={32} />

@@ -20,7 +20,7 @@ export default function Log() {
         borderBottomLeftRadius={20}>
         <TopSearchbar
           isTrackingScreen={false}
-          placeholder="Search your meal here"
+          placeholder="Zoek je favoriete maaltijd"
           showBackButton={false}
         />
       </YStack>

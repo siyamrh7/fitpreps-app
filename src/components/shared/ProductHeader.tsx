@@ -47,7 +47,7 @@ export default function ProductHeader({
             borderBottomEndRadius: 20,
             paddingTop: insets.top,
           }}>
-          <TopSearchbar placeholder="Search your meal here" />
+          <TopSearchbar placeholder="Zoek je favoriete maaltijd" />
         </XStack>
         {(selectCategory === 'Supplements' || selectCategory === 'Gym Wear') && gender === null && (
           <View px={16} py={20}>
@@ -65,7 +65,7 @@ export default function ProductHeader({
           <>
             <XStack px={16} py={productType === 'suppd' || productType === 'shapped' ? 10 : 20}>
               <Text color="#25272C" fontWeight={700} fontSize={16}>
-                What are you looking for today?
+                Waar heb je vandaag zin in?
               </Text>
             </XStack>
             <SelectedFoodCategories

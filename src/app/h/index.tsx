@@ -193,11 +193,11 @@ export default function Home() {
         pointerEvents={showCompact ? 'none' : 'auto'}>
         <SafeAreaView>
           <XStack bg="#0A8A23" borderBottomStartRadius={20} borderBottomEndRadius={20}>
-            <TopSearchbar placeholder="Search your meal here" />
+            <TopSearchbar placeholder="Zoek je favoriete maaltijd" />
           </XStack>
           <XStack px={16} py={20}>
             <H5 color="#25272C" fontWeight={700} size={16}>
-              What are you looking for today?
+              Waar heb je vandaag zin in?
             </H5>
           </XStack>
           <SelectedFoodCategories cookdFoodCategories={cookdFoodCategories} />
@@ -282,7 +282,7 @@ export default function Home() {
               <XStack alignItems="center" position="relative" flex={1}>
                 <Input
                   flex={1}
-                  placeholder="Search your meal here"
+                  placeholder="Zoek je favoriete maaltijd"
                   placeholderTextColor="#717680"
                   fontSize={14}
                   pr={40}

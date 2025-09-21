@@ -35,6 +35,25 @@ export default function TabLayout() {
           />
         ),
       }}>
+          <Tabs.Screen
+        name="index"
+        options={{
+          title: 'Home',
+          headerShown: false,
+          tabBarIcon: ({ color, focused }) => {
+            return !focused ? (
+              <Image source={require('public/images/home.png')} width={28} height={28} />
+            ) : (
+              <Image source={require('public/images/fhome.png')} width={28} height={28} />
+            );
+          },
+          headerRight: () => (
+            <Link href="/modal" asChild>
+              <HeaderButton />
+            </Link>
+          ),
+        }}
+      />
       <Tabs.Screen
         name="meals"
         options={{
@@ -54,7 +73,23 @@ export default function TabLayout() {
           ),
         }}
       />
+     
+    
       <Tabs.Screen
+        name="shop"
+        options={{
+          headerShown: false,
+          title: 'Shop',
+          tabBarIcon: ({ color, focused }) => {
+            return !focused ? (
+              <Image source={require('public/images/shop.png')} width={28} height={28} />
+            ) : (
+              <Image source={require('public/images/fshop.png')} width={28} height={28} />
+            );
+          },
+        }}
+      />
+       <Tabs.Screen
         name="subscription"
         options={{
           title: 'Mijn plan',
@@ -77,40 +112,7 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          headerShown: false,
-          tabBarIcon: ({ color, focused }) => {
-            return !focused ? (
-              <Image source={require('public/images/home.png')} width={28} height={28} />
-            ) : (
-              <Image source={require('public/images/fhome.png')} width={28} height={28} />
-            );
-          },
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <HeaderButton />
-            </Link>
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="shop"
-        options={{
-          headerShown: false,
-          title: 'Shop',
-          tabBarIcon: ({ color, focused }) => {
-            return !focused ? (
-              <Image source={require('public/images/shop.png')} width={28} height={28} />
-            ) : (
-              <Image source={require('public/images/fshop.png')} width={28} height={28} />
-            );
-          },
-        }}
-      />
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="track"
         options={{
           href: '/(tracking)',
@@ -123,7 +125,7 @@ export default function TabLayout() {
             );
           },
         }}
-      />
+      /> */}
     </Tabs>
   );
 }

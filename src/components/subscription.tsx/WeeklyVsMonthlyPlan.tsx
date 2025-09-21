@@ -1,5 +1,5 @@
 import { Text, XStack, YStack } from 'tamagui';
-import { weeklyPlans } from '~/src/constant';
+import { monthlyPlans, weeklyPlans } from '~/src/constant';
 
 export default function WeeklyVsMonthlyPlan() {
   return (
@@ -13,7 +13,7 @@ export default function WeeklyVsMonthlyPlan() {
             textTransform="uppercase"
             fontSize={24}
             fontWeight={700}>
-            weekly{' '}
+            Wekelijks{' '}
           </Text>
         </XStack>
         <XStack bg="rgba(255, 116, 53, 0.15)" py={8} borderTopEndRadius={12} width="50%">
@@ -24,7 +24,7 @@ export default function WeeklyVsMonthlyPlan() {
             color="#FD4F01"
             fontSize={24}
             fontWeight={700}>
-            MONTHLY
+            Maandelijks
           </Text>
         </XStack>
       </XStack>
@@ -70,7 +70,7 @@ export default function WeeklyVsMonthlyPlan() {
           px={8}
           bg="rgba(255, 116, 53, 0.15)"
           borderBottomRightRadius={12}>
-          {weeklyPlans.map((plan, i) => {
+          {monthlyPlans.map((plan, i) => {
             return (
               <YStack key={i}>
                 <XStack alignItems="center" gap={4}>

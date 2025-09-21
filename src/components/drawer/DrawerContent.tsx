@@ -92,47 +92,47 @@ export default function DrawerContent({ navigation }: { navigation: DrawerNaviga
 
 const drawerList = [
   {
-    name: 'My Profile',
+    name: 'Mijn profiel',
     icon: User,
     path: '/(navigator)/my-profile',
   },
   {
-    name: 'Manage Subscription',
+    name: 'Abonnement beheren',
     icon: Group,
     path: '/(navigator)/manage-subscription',
   },
   {
-    name: 'My Orders',
+    name: 'Mijn bestellingen',
     icon: ShoppingCart,
     path: '/(navigator)/orders',
   },
   {
-    name: 'Addresses',
+    name: 'Adressen',
     icon: MarkerPin,
     path: '/(navigator)/addresses',
   },
   {
-    name: 'Payment Methods',
+    name: 'Betaalmethoden',
     icon: CreditCard,
     path: '/(navigator)/payment-methods',
   },
   {
-    name: 'Contact Us',
+    name: 'Contact opnemen',
     icon: Phone,
     path: '/(navigator)/contact-us',
   },
   {
-    name: 'FAQs',
+    name: 'Veelgestelde vragen',
     icon: Chat,
     path: '/(navigator)/faqs',
   },
   {
-    name: 'Settings',
+    name: 'Instellingen',
     icon: Settings,
     path: '/(navigator)/settings',
   },
   {
-    name: 'Log Out',
+    name: 'Uitloggen',
     icon: LogOut,
     path: '/(navigator)/logout',
   },

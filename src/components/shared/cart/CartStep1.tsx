@@ -2,7 +2,6 @@ import { Button, Text, View, XStack, YStack, Dialog } from 'tamagui';
 import React, { useCallback, useState, useEffect } from 'react';
 import { FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import FooterCart from './CartFooter';
-import { extraFoods } from '~/src/constant';
 import CartFoodList from './CartFoodList';
 import SubsHeader from './Subscription/SubsHeader';
 import SubsPlan from './Subscription/SubsPlan';
@@ -61,11 +60,7 @@ export default function CartStep1({
 
   const renderItem = useCallback(({ item, index }: { item: any; index: number }) => {
     return (
-      <View
-        style={{
-          marginTop: index === 0 ? 20 : 0,
-          marginBottom: index === extraFoods.length - 1 ? 20 : 0,
-        }}>
+      <View>
         <CartFoodList item={item} />
       </View>
     );

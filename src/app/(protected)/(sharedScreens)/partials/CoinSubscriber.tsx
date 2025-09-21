@@ -12,11 +12,11 @@ export default function CoinSubscriber({ subscription }: { subscription: any }) 
     <YStack gap="$5" borderRadius={20} bg="white" px="$3" py="$5" mb={40}>
       <YStack gap="$3">
         <Text fontSize={16} fontWeight={700} color="#1E1F20">
-          Use your subscription points for your meals!
+          Gebruik je abonnementspunten voor je meals
         </Text>
         <XStack alignItems="center" justifyContent="center" gap="$2">
           <Text color="#1E1F20" fontSize={16} fontWeight={500}>
-            You have
+          Je hebt
           </Text>
           <XStack alignItems="center" gap={4}>
             <Text color="#FD4F01" fontWeight={700} fontSize={16}>
@@ -25,7 +25,7 @@ export default function CoinSubscriber({ subscription }: { subscription: any }) 
             <Coin />
           </XStack>
           <Text color="#1E1F20" fontSize={16} fontWeight={500}>
-            available.
+           beschikbaar.
           </Text>
         </XStack>
       </YStack>
@@ -45,7 +45,7 @@ export default function CoinSubscriber({ subscription }: { subscription: any }) 
           {...shadows.small}
           borderRadius={8}
           px="$5">
-          Use Subscription Points
+          Gebruik mijn punten
         </Button>
         <TouchableOpacity onPress={() => router.push('/(navigator)/(tabs)/subscription')}>
           <Text
@@ -54,7 +54,7 @@ export default function CoinSubscriber({ subscription }: { subscription: any }) 
             fontWeight={700}
             borderBottomColor="#FD4F01"
             borderBottomWidth={2}>
-            Buy Subscription Plan
+            Kies abonnement
           </Text>
         </TouchableOpacity>
       </YStack>

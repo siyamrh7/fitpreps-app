@@ -6,7 +6,7 @@ import { Button, Text, View, XStack, YStack } from 'tamagui';
 import VideoRecorder from 'public/images/video-recorder.svg';
 import { router } from 'expo-router';
 const videoSource =
-  'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
+  'https://www.youtube.com/watch?v=4pNnXkqmTzA&t=114s';
 
 export default function WithoutCoinSubscriber({ product }: { product: string }) {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -41,13 +41,10 @@ export default function WithoutCoinSubscriber({ product }: { product: string }) 
       <YStack py="$5" px="$3" gap="$5" bg="rgba(255, 255, 255, 0.85)" borderRadius={20}>
         <YStack gap="$3">
           <Text textAlign="center" color="#1E1F20" fontSize={16} fontWeight={700}>
-            Before we start!
+          Voordat we starten:
           </Text>
           <Text color="black" fontSize={14} fontWeight={500}>
-            With your subscription, you&apos;re actually buying points—not meals directly. These
-            points let you choose the meals you want, when you want them. Watch the video below to
-            see how it works.
-          </Text>
+          Met je abonnement koop je eigenlijk punten, niet direct maaltijden. Met die punten kies je precies de meals die jij wilt, wanneer jij ze wilt.</Text>
         </YStack>
         <View style={styles.videoContainer}>
           <VideoView style={styles.video} player={player} allowsFullscreen allowsPictureInPicture />
@@ -86,7 +83,7 @@ export default function WithoutCoinSubscriber({ product }: { product: string }) 
             fontSize={16}
             fontWeight={700}
             px="$5">
-            Get Started
+           Aan de slag
           </Button>
         </XStack>
       </YStack>

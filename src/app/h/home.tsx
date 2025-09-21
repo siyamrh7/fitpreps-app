@@ -139,12 +139,12 @@ export default function Home() {
         <Header>
           <YStack>
             <XStack bg="$green9" borderBottomStartRadius={20} borderBottomEndRadius={20}>
-              <TopSearchbar placeholder="Search your meal here" />
+              <TopSearchbar placeholder="Zoek je favoriete maaltijd" />
             </XStack>
 
             <XStack px="$4" py="$5">
               <H5 color="$gray12" fontWeight="700" size="$4">
-                What are you looking for today?
+                Waar heb je vandaag zin in?
               </H5>
             </XStack>
 

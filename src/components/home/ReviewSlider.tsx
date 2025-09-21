@@ -10,8 +10,7 @@ export default function ReviewSlider() {
   return (
     <>
       <Text textAlign="center" fontSize={24} fontWeight={800}>
-        REAL PEOPLE, REAL RESULTS, REAl SATISFACTIONS!
-      </Text>
+      ECHTE MENSEN. ECHTE RESULTATEN. ECHTE VOLDOENING.      </Text>
       <YStack>
         <Carousel
           autoPlay={true}

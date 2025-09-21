@@ -62,7 +62,7 @@ export default function SelectSubscriptionPlan({
                 borderTopRightRadius={plan.name === selectedPlan.name ? 12 : 0}
                 backgroundColor={plan.name === selectedPlan.name ? 'white' : 'transparent'}>
                 <Text fontSize={16} color="#1E1F20" fontWeight={700}>
-                  {plan.name}
+                  {plan.name === 'Weekly Plan' ? 'Wekelijks Plan' : 'Maandelijks Plan'}
                 </Text>
                 <Text
                   alignSelf="flex-start"
@@ -72,7 +72,7 @@ export default function SelectSubscriptionPlan({
                   fontSize={10}
                   p={8}
                   borderRadius={20}>
-                  Save {plan.save}%
+                  Bespaar {plan.save}%
                 </Text>
               </YStack>
             </TouchableOpacity>
@@ -104,7 +104,7 @@ export default function SelectSubscriptionPlan({
                         </Text>
                       </XStack>
                       <XStack alignItems="center" justifyContent="center">
-                        <Text
+                        {/* <Text
                           borderRadius={40}
                           color="#D24100"
                           fontSize={10}
@@ -112,7 +112,7 @@ export default function SelectSubscriptionPlan({
                           px="$2"
                           bg="#FFDADF">
                           {plan.badge}
-                        </Text>
+                        </Text> */}
                       </XStack>
                     </XStack>
                     <Text color="#25272C" fontSize={14} fontWeight={700}>
@@ -148,15 +148,15 @@ export default function SelectSubscriptionPlan({
                       </XStack>
                     </XStack>
                     <Text fontSize={11} color="#25272C" fontWeight={500}>
-                      {plan.shippingPrice ? '+ €6.95 Shipping' : '  Free Shipping'}
+                      {plan.shippingPrice ? ' €6.95 Verzending' : '  Gratis Verzending'}
                     </Text>
                   </XStack>
                   <Text fontSize={12} fontWeight={500} color="#25272C">
-                    Average{' '}
+                  Gemiddeld{' '}
                     <Text fontSize={12} fontWeight={500} color="#25272C">
-                      ~{plan.average}
+                      {plan.average}
                     </Text>{' '}
-                    meals
+                    maaltijden
                   </Text>
                 </YStack>
               </TouchableOpacity>
@@ -172,7 +172,7 @@ export default function SelectSubscriptionPlan({
           fontSize={14}
           fontWeight={700}
           onPress={handleSubscription}>
-          {selectedPlan.name === 'Weekly Plan' ? 'Buy Weekly Plan' : 'Buy Monthly Plan'}
+          {selectedPlan.name === 'Weekly Plan' ? 'Kies Wekelijks Plan' : 'Kies Maandelijks Plan'}
         </Button>
       ) : (
         <Button

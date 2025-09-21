@@ -6,7 +6,7 @@ export default function WeeklyOffer() {
   return (
     <>
       <Text textAlign="center" fontSize={24} fontWeight={800}>
-        Weekly Offer - Don&apos;t miss it
+      WEEKDEAL – MIS ‘M NIET
       </Text>
       <YStack gap="$7" bg="#FAD759" borderRadius={12} overflow="hidden">
         <XStack w="100%">
@@ -18,12 +18,13 @@ export default function WeeklyOffer() {
         </XStack>
         <YStack gap="$5" px="$4" py="$5">
           <Text textAlign="center" fontSize={20} fontWeight={700}>
-            Fresh Meals, Zero Prep
+          Verse maaltijden. Zero prep.
           </Text>
           <Text textAlign="center" fontSize={14} fontWeight={500}>
-            Order any weekly meal plan today and grab 25 % off every meal or vitamin pack in the
-            cart.
+          Bestel deze week een meal plan en pak 25% korting op elke maaltijd of vitamin pack in je winkelmand.
+
           </Text>
+          <Text textAlign="center" fontSize={14} fontWeight={500}>Gebruik code FITPREPS25 bij het afrekenen. Deze deal eindigt zondag, dus vul je koelkast, stack je shelf en keep moving.</Text>
           <XStack alignItems="center" justifyContent="center">
             <Button
               bg="#FD4F01"
@@ -33,7 +34,7 @@ export default function WeeklyOffer() {
               fontWeight={700}
               px={20}
               iconAfter={<ArrowNarrowUpRight />}>
-              Use Code Now
+              Gebruik de code nu
             </Button>
           </XStack>
         </YStack>

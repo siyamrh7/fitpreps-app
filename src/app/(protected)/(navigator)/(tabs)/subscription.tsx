@@ -28,14 +28,16 @@ export default function Home() {
             </XStack>
             <YStack>
               <Text fontSize={20} fontWeight={700} color="#1E1F20">
-                Welcome{' '}
+              Hey,{' '}
                 <Text fontSize={20} fontWeight={700} color="#FD4F01">
                   {user?.metadata.first_name}!
                 </Text>
               </Text>
               <Text fontSize={14} fontWeight={500} color="#1E1F20">
-                Select a plan below to start getting points and enjoying fresh, fitness-focused
-                meals delivered to your door.
+              Kies hieronder je plan en begin met jou abonnement. Geniet van verse, smakelijke maaltijden aan huis - én extra voordeel.
+
+
+
               </Text>
             </YStack>
             <SelectSubscriptionPlan product={product as string} />

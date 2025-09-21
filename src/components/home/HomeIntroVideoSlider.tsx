@@ -29,7 +29,7 @@ export default function HomeIntroVideoSlider() {
   return (
     <YStack>
       <Text fontSize={24} fontWeight={800} textAlign="center">
-        Trusted by people that rise to every challenge
+      VERTROUWD DOOR MENSEN DIE ELKE DAG OPSTAAN OM TE KNALLEN.
       </Text>
 
       <ScrollView

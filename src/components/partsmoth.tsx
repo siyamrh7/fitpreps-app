@@ -95,7 +95,7 @@ export default function Home() {
                 // shadowRadius={1}
               >
                 <Input
-                  placeholder="Search here"
+                  placeholder="Zoeken"
                   flex={1}
                   focusStyle={{
                     borderColor: 'transparent',

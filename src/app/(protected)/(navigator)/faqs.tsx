@@ -34,7 +34,7 @@ export default function Faqs() {
                 justifyContent="space-between"
                 {...shadows.small}>
                 <Input
-                  placeholder="Search here"
+                  placeholder="Zoeken"
                   flex={1}
                   focusStyle={{
                     borderColor: 'transparent',

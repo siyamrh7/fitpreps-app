@@ -12,7 +12,7 @@ export default function AddFoodCals() {
         bg="$tracking-primary"
         borderBottomRightRadius={20}
         borderBottomLeftRadius={20}>
-        <TopSearchbar placeholder="Search your meal here" showBackButton={false} />
+        <TopSearchbar placeholder="Zoek je favoriete maaltijd" showBackButton={false} />
       </YStack>
     </YStack>
   );

@@ -29,10 +29,10 @@ export default function subscription() {
               </TouchableOpacity>
               <YStack gap={12}>
                 <Text color="white" fontSize={32} fontWeight={800}>
-                  Subscription
+                Abonnement
                 </Text>
                 <Text textAlign="center" color="white" fontWeight={700} fontSize={14}>
-                  Simple, fast, and flexible.{' '}
+                Simpel, snel en flexibel{' '}
                 </Text>
               </YStack>
               <TouchableOpacity style={{ ...styles.rightBtn }}>

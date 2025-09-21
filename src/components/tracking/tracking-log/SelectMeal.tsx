@@ -72,7 +72,7 @@ export default function SelectMeal({
           <Search
             value={search}
             onChangeText={setSearch}
-            placeholder="Search your meal here"
+            placeholder="Zoek je favoriete maaltijd"
             onPress={() => setPressSearchBar(true)}
           />
           {pressSearchBar && search && (
